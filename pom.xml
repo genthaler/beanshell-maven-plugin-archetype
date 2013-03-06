@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.apache.maven.archetypes</groupId>
-	<artifactId>maven-archetype-ant-plugin</artifactId>
+	<artifactId>maven-archetype-beanshell-plugin</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 	<name>Maven Archetype Beanshell-based Maven Plugin</name>
 	<description>Maven Archetype to generate an Beanshell-based Maven Plugin</description>
-	<url>http://genthaler.github.com/maven-archetype-ant-plugin/</url>
+	<url>http://genthaler.github.com/maven-archetype-beanshell-plugin/</url>
 	<inceptionYear>2012</inceptionYear>
 	<licenses>
 		<license>
@@ -22,22 +23,22 @@
 		</developer>
 	</developers>
 	<scm>
-		<connection>scm:git:git://github.com/genthaler/maven-archetype-ant-plugin.git</connection>
-		<developerConnection>scm:git:https://github.com/genthaler/maven-archetype-ant-plugin.git</developerConnection>
+		<connection>scm:git:https://github.com/genthaler/maven-archetype-beanshell-plugin.git</connection>
+		<developerConnection>scm:git:https://github.com/genthaler/maven-archetype-beanshell-plugin.git</developerConnection>
 		<tag>HEAD</tag>
-		<url>http://github.com/genthaler/maven-archetype-ant-plugin</url>
+		<url>http://github.com/genthaler/maven-archetype-beanshell-plugin</url>
 	</scm>
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/genthaler/maven-archetype-ant-plugin/issues</url>
+		<url>https://github.com/genthaler/maven-archetype-beanshell-plugin/issues</url>
 	</issueManagement>
 	<distributionManagement>
 		<site>
 			<id>github</id>
 			<name>GitHub</name>
-			<url>http://genthaler.github.com/maven-archetype-ant-plugin/</url>
+			<url>http://genthaler.github.com/maven-archetype-beanshell-plugin/</url>
 		</site>
-		<downloadUrl>https://github.com/genthaler/maven-archetype-ant-plugin/archive/master.zip</downloadUrl>
+		<downloadUrl>https://github.com/genthaler/maven-archetype-beanshell-plugin/archive/master.zip</downloadUrl>
 	</distributionManagement>
 	<properties>
 		<antVersion>1.8</antVersion>

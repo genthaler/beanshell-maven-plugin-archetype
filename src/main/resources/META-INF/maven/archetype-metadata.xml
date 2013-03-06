@@ -9,7 +9,7 @@
 			<defaultValue>Beanshell Touch Maven Plugin</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="pluginDescription">
-			<defaultValue>Maven plugin using the Apach Beanshell Touch task to touch a given file</defaultValue>
+			<defaultValue>Maven plugin using Beanshell to touch a given file</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="goalName">
 			<defaultValue>touch</defaultValue>
@@ -37,7 +37,7 @@
 		<fileSet filtered="true" encoding="UTF-8">
 			<directory>src/main/scripts</directory>
 			<includes>
-				<include>**/*.xml</include>
+				<include>**/*.bsh</include>
 			</includes>
 		</fileSet>
 		<fileSet filtered="true" encoding="UTF-8">

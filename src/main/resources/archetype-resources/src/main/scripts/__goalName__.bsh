@@ -2,11 +2,10 @@
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
 /**
- * Touches a test file.
+ * ${goalDescription}
  *
- * @goal touch
+ * @goal ${goalName}
  * @requiresDependencyResolution=test
- * @deprecated Don't use!
  * @since 1.2
  */
 
@@ -14,34 +13,21 @@ import org.apache.maven.plugin.Mojo;
 import org.apache.maven.script.beanshell.BeanshellMojoAdapter;
 import org.codehaus.plexus.util.FileUtils;
 
-
-
 execute()
 {
-    logger.info( "Executing beanshell mojo..." );
-    FileUtils.fileWrite( outDir + "/" + name, "This is a Beanshell test" );
-}
-
-/**
- * Output directory for files.
- *
- * @parameter expression="${project.build.directory}"
- * @required
- */
-setOutDir( file )
-{
-    outDir = file;
+    logger.info( "Executing ${parameterDescription} beanshell mojo..." );
+    FileUtils.fileWrite( ${parameterName}, "This is a ${parameterDescription} Beanshell test" );
 }
 
 /**
  *
  *
- * @parameter expression="${name}"
+ * @parameter expression="${parameterExpression}"
  * @required
  */
-setName( name )
+set${parameterName}( ${parameterName} )
 {
-    name = name;
+    ${parameterName} = ${parameterName};
 }
 
 return new BeanshellMojoAdapter( (Mojo) this, this.interpreter );

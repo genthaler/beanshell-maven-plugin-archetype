@@ -1,8 +1,8 @@
-# Maven Archetype to create an Beanshell-based Maven Plugin
+# Maven Archetype to create an Ant-based Maven Plugin
 
 ## Current status
 
-**Currently just a stub**
+**It's working!**
 
 The site is also complete. See it at the project's [GitHub Page](http://genthaler.github.com/maven-archetype-beanshell-plugin)
 

@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-
-<!--
-/*
- * Copyright 2006 The Apache Software Foundation.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
--->
-
+<!-- /* * Copyright 2006 The Apache Software Foundation. * * Licensed under 
+	the Apache License, Version 2.0 (the "License"); * you may not use this file 
+	except in compliance with the License. * You may obtain a copy of the License 
+	at * * http://www.apache.org/licenses/LICENSE-2.0 * * Unless required by 
+	applicable law or agreed to in writing, software * distributed under the 
+	License is distributed on an "AS IS" BASIS, * WITHOUT WARRANTIES OR CONDITIONS 
+	OF ANY KIND, either express or implied. * See the License for the specific 
+	language governing permissions and * limitations under the License. */ -->
 <project xmlns="http://maven.apache.org/DECORATION/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
@@ -29,6 +18,25 @@
 		</menu>
 		<menu name="Examples">
 			<item name="Example usage" href="examples/example.html" />
+		</menu>
+		<menu name="Links">
+			<item name="Maven Plugin Plugin - Writing a Beanshell Maven Plugin"
+				href="http://maven.apache.org/plugin-tools/maven-plugin-plugin/examples/beanshell-mojo.html" />
+			<item name="Maven Beanshell Mojo Support - About"
+				href="http://maven.apache.org/plugin-tools/maven-script/maven-script-beanshell" />
+			<item name="Writing Beanshell Plugins for Maven 2.0"
+				href="http://brettporter.wordpress.com/2005/05/21/writing-beanshell-plugins-for-maven-20" />
+			<item name="Maven - Developers centre - Testing Plugins Strategies"
+				href="http://maven.apache.org/plugin-developers/plugin-testing.html" />
+			<item name="Maven - Guide to Developing Java Plugins"
+				href="http://maven.apache.org/guides/plugin/guide-java-plugin-development.html" />
+			<item name="MaestroDev | Developing your First Mojo"
+				href="http://www.maestrodev.com/better-builds-with-maven/developing-custom-maven-plugins/developing-your-first-mojo" />
+			<item name="Maven Plugin Plugin - Introduction"
+				href="http://maven.apache.org/plugin-tools/maven-plugin-plugin" />
+			<item name="Maven Archetype Plugin"
+				href="http://maven.apache.org/archetype/maven-archetype-plugin" />
+			<item name="BeanShell - Lightweight Scripting for Java" href="http://www.beanshell.org" />
 		</menu>
 		<menu ref="reports" />
 	</body>
