@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.apache.maven.archetypes</groupId>
 	<artifactId>maven-archetype-beanshell-plugin</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>maven-archetype</packaging>
 	<name>Maven Archetype Beanshell-based Maven Plugin</name>
 	<description>Maven Archetype to generate an Beanshell-based Maven Plugin</description>
@@ -25,7 +24,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/genthaler/maven-archetype-beanshell-plugin.git</connection>
 		<developerConnection>scm:git:https://github.com/genthaler/maven-archetype-beanshell-plugin.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>maven-archetype-beanshell-plugin-1.0</tag>
 		<url>http://github.com/genthaler/maven-archetype-beanshell-plugin</url>
 	</scm>
 	<issueManagement>
