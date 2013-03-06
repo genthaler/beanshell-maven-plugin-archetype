@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.apache.maven.archetypes</groupId>
 	<artifactId>maven-archetype-beanshell-plugin</artifactId>
-	<version>1.0</version>
+	<version>1.1-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 	<name>Maven Archetype Beanshell-based Maven Plugin</name>
 	<description>Maven Archetype to generate an Beanshell-based Maven Plugin</description>
@@ -24,7 +24,7 @@
 	<scm>
 		<connection>scm:git:https://github.com/genthaler/maven-archetype-beanshell-plugin.git</connection>
 		<developerConnection>scm:git:https://github.com/genthaler/maven-archetype-beanshell-plugin.git</developerConnection>
-		<tag>maven-archetype-beanshell-plugin-1.0</tag>
+		<tag>HEAD</tag>
 		<url>http://github.com/genthaler/maven-archetype-beanshell-plugin</url>
 	</scm>
 	<issueManagement>
@@ -96,7 +96,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-release-plugin</artifactId>
-				<configuration></configuration>
+				<configuration />
 			</plugin>
 			<plugin>
 				<artifactId>maven-docck-plugin</artifactId>
