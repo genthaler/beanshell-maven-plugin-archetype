@@ -1,0 +1,160 @@
+ ------
+ ${project.name} - Example Usage
+ ------
+ G\u00fcnther Enthaler
+ ------
+ 2013-03-04
+ ------
+${project.name}
+
+  The archetype can be generated interactively
+
++------------------
+
+$ mvn archetype:generate \
+	-DinteractiveMode=true \
+	-DarchetypeGroupId=${project.groupId} \
+	-DarchetypeArtifactId=${project.artifactId} \
+	-DarchetypeVersion=${project.version}
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-archetype-plugin:2.2:generate (default-cli) @ standalone-pom >>>
+[INFO] 
+[INFO] <<< maven-archetype-plugin:2.2:generate (default-cli) @ standalone-pom <<<
+[INFO] 
+[INFO] --- maven-archetype-plugin:2.2:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Interactive mode
+[INFO] Archetype repository missing. Using the one from [${project.groupId}:${project.artifactId}:${project.version}] found in catalog local
+Define value for property 'groupId': : com.example
+Define value for property 'artifactId': : touch-beanshell-maven-plugin
+Define value for property 'version':  1.0-SNAPSHOT: : 
+Define value for property 'package':  com.example: : 
+[INFO] Using property: goalName = touch
+[INFO] Using property: goalPrefix = touch
+[INFO] Using property: parameterDefaultValue = touched.txt
+[INFO] Using property: parameterDescription = File to be touched
+[INFO] Using property: parameterExpression = file
+[INFO] Using property: parameterName = file
+[INFO] Using property: parameterType = java.io.File
+[INFO] Using property: pluginDescription = Maven plugin using the Apach Beanshell Touch task to touch a given file
+[INFO] Using property: pluginName = Beanshell Touch Maven Plugin
+Confirm properties configuration:
+groupId: com.example
+artifactId: touch-beanshell-maven-plugin
+version: 1.0-SNAPSHOT
+package: com.example
+goalName: touch
+goalPrefix: touch
+parameterDefaultValue: touched.txt
+parameterDescription: File to be touched
+parameterExpression: file
+parameterName: file
+parameterType: java.io.File
+pluginDescription: Maven plugin using the Apach Beanshell Touch task to touch a given file
+pluginName: Beanshell Touch Maven Plugin
+ Y: : 
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Archetype: ${project.artifactId}:${project.version}
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: com.example
+[INFO] Parameter: artifactId, Value: touch-beanshell-maven-plugin
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] Parameter: package, Value: com.example
+[INFO] Parameter: packageInPathFormat, Value: com/example
+[INFO] Parameter: parameterDescription, Value: File to be touched
+[INFO] Parameter: pluginDescription, Value: Maven plugin using the Apach Beanshell Touch task to touch a given file
+[INFO] Parameter: goalPrefix, Value: touch
+[INFO] Parameter: groupId, Value: com.example
+[INFO] Parameter: parameterType, Value: java.io.File
+[INFO] Parameter: goalName, Value: touch
+[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] Parameter: pluginName, Value: Beanshell Touch Maven Plugin
+[INFO] Parameter: parameterExpression, Value: file
+[INFO] Parameter: package, Value: com.example
+[INFO] Parameter: parameterName, Value: file
+[INFO] Parameter: parameterDefaultValue, Value: touched.txt
+[INFO] Parameter: artifactId, Value: touch-beanshell-maven-plugin
+[WARNING] Don't override file .../touch-beanshell-maven-plugin/pom.xml
+[INFO] project created from Archetype in dir: .../touch-beanshell-maven-plugin
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 45.934s
+[INFO] Finished at: Mon Mar 04 22:38:33 EST 2013
+[INFO] Final Memory: 9M/81M
+[INFO] ------------------------------------------------------------------------
+
++------------------
+
+  or non-interactively
+
++------------------
+
+$ mvn archetype:generate \
+	-DinteractiveMode=false \
+	-DarchetypeGroupId=${project.groupId} \
+	-DarchetypeArtifactId=${project.artifactId} \
+	-DarchetypeVersion=${project.version}
+	-DgroupId=org.apache.maven.plugins \
+	-DartifactId=touch-beanshell-maven-plugin \
+	-Dversion=0.1-SNAPSHOT \
+	-Dpackage=org.apache.maven.plugins.beanshell.touch \
+	-DgoalName=touch \
+	-DgoalPrefix=touch \
+	-DpluginName="Beanshell Touch Maven Plugin" \
+	-DpluginDescription="Maven plugin using the Beanshell Touch task to touch a given file" \
+	-DparameterName=file \
+	-DparameterType=java.io.File \
+	-DparameterDescription="File to be touched"
+
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building Maven Stub Project (No POM) 1
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] >>> maven-archetype-plugin:2.2:generate (default-cli) @ standalone-pom >>>
+[INFO] 
+[INFO] <<< maven-archetype-plugin:2.2:generate (default-cli) @ standalone-pom <<<
+[INFO] 
+[INFO] --- maven-archetype-plugin:2.2:generate (default-cli) @ standalone-pom ---
+[INFO] Generating project in Batch mode
+[INFO] Archetype repository missing. Using the one from [${project.groupId}:${project.artifactId}:${project.version}] found in catalog local
+[INFO] ----------------------------------------------------------------------------
+[INFO] Using following parameters for creating project from Archetype: ${project.artifactId}:${project.version}
+[INFO] ----------------------------------------------------------------------------
+[INFO] Parameter: groupId, Value: org.apache.maven.plugins
+[INFO] Parameter: artifactId, Value: touch-beanshell-maven-plugin
+[INFO] Parameter: version, Value: 0.1-SNAPSHOT
+[INFO] Parameter: package, Value: org.apache.maven.plugins.beanshell.touch
+[INFO] Parameter: packageInPathFormat, Value: org/apache/maven/plugins/beanshell/touch
+[INFO] Parameter: parameterDescription, Value: File to be touched
+[INFO] Parameter: pluginDescription, Value: Maven plugin using the Beanshell Touch task to touch a given file
+[INFO] Parameter: goalPrefix, Value: touch
+[INFO] Parameter: groupId, Value: org.apache.maven.plugins
+[INFO] Parameter: parameterType, Value: java.io.File
+[INFO] Parameter: goalName, Value: touch
+[INFO] Parameter: version, Value: 0.1-SNAPSHOT
+[INFO] Parameter: pluginName, Value: Beanshell Touch Maven Plugin
+[INFO] Parameter: parameterExpression, Value: file
+[INFO] Parameter: package, Value: org.apache.maven.plugins.beanshell.touch
+[INFO] Parameter: parameterName, Value: file
+[INFO] Parameter: parameterDefaultValue, Value: touched.txt
+[INFO] Parameter: artifactId, Value: touch-beanshell-maven-plugin
+[WARNING] Don't override file .../touch-beanshell-maven-plugin/pom.xml
+[INFO] project created from Archetype in dir: .../touch-beanshell-maven-plugin
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.118s
+[INFO] Finished at: Mon Mar 04 22:48:48 EST 2013
+[INFO] Final Memory: 9M/81M
+[INFO] ------------------------------------------------------------------------
+
++------------------
+
+  Note that the property defaults of the ${project.artifactId} lend themselves to a plugin called touch-beanshell-maven-plugin.

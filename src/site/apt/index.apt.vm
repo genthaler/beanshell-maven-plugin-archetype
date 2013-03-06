@@ -1,0 +1,33 @@
+ ------
+ Introduction
+ ------
+ G\u00fcnther Enthaler
+ ------
+ 2013-03-04
+ ------
+
+${project.name}
+
+  This archetype will generate a skeleton Maven 2 Beanshell-Based Plugin 
+
+* Usage
+
+  General instructions on how to use the this archetype can be found on the {{{./usage.html}usage page}}. Some more
+  specific use cases are described in the examples given below.
+
+  In case you still have questions regarding the plugin's usage, please have a look at the {{{./faq.html}FAQ}} and feel
+  free to {{{./issue-tracking.html}ask a question}}. It is also worth browsing/searching {{{./issue-tracking.html}previous issues}}.
+
+  If you feel like the plugin is missing a feature or has a defect, you can fill a feature request or bug report in our
+  {{{./issue-tracking.html}issue tracker}}. When creating a new issue, please provide a comprehensive description of your
+  concern. Especially for fixing bugs it is crucial that the developers can reproduce your problem. For this reason,
+  entire debug logs, POMs or most preferably little demo projects attached to the issue are very much appreciated.
+  Of course, patches are welcome, too. Contributors can check out the project from our
+  {{{./source-repository.html}source repository}}.
+
+* Examples
+
+  To provide you with better understanding of some usages of the ${project.name},
+  you can take a look at the following examples:
+
+  * {{{./examples/example.html}Example}}

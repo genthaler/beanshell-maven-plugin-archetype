@@ -1,0 +1,18 @@
+ ------
+ Usage
+ ------
+ G\u00fcnther Enthaler
+ ------
+ 2013-03-04
+ ------
+
+Usage
+
+ This archetype will create a skeleton Beanshell-based Maven 2/3 plugin
+
++-------------------
+mvn archetype:generate \
+	-DarchetypeGroupId=${project.groupId} \
+	-DarchetypeArtifactId=${project.artifactId} \
+	-DarchetypeVersion=${project.version}
++-------------------

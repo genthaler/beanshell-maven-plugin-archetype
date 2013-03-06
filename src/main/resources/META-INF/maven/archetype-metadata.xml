@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+	name="maven-archetype-beanshell-plugin"
+	xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<requiredProperties>
+		<requiredProperty key="pluginName">
+			<defaultValue>Beanshell Touch Maven Plugin</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="pluginDescription">
+			<defaultValue>Maven plugin using the Apach Beanshell Touch task to touch a given file</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="goalName">
+			<defaultValue>touch</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="goalPrefix">
+			<defaultValue>touch</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="parameterName">
+			<defaultValue>file</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="parameterType">
+			<defaultValue>java.io.File</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="parameterDescription">
+			<defaultValue>File to be touched</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="parameterExpression">
+			<defaultValue>file</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="parameterDefaultValue">
+			<defaultValue>touch.txt</defaultValue>
+		</requiredProperty>
+	</requiredProperties>
+	<fileSets>
+		<fileSet filtered="true" encoding="UTF-8">
+			<directory>src/main/scripts</directory>
+			<includes>
+				<include>**/*.xml</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" encoding="UTF-8">
+			<directory>src/it</directory>
+			<includes>
+				<include>**/*.xml</include>
+				<include>**/*.properties</include>
+				<include>**/*.groovy</include>
+			</includes>
+		</fileSet>
+		<fileSet filtered="true" encoding="UTF-8">
+			<directory></directory>
+			<includes>
+				<include>*.xml</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+</archetype-descriptor>
