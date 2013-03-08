@@ -1,4 +1,4 @@
-# Maven Archetype to create an Ant-based Maven Plugin
+# Maven Archetype to create an BeanShell-based Maven Plugin
 
 ## Current status
 
