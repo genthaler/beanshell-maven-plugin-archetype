@@ -15,7 +15,8 @@ $ mvn archetype:generate \
 	-DinteractiveMode=true \
 	-DarchetypeGroupId=${project.groupId} \
 	-DarchetypeArtifactId=${project.artifactId} \
-	-DarchetypeVersion=${project.version}
+	-DarchetypeVersion=${project.version} \
+	-DarchetypeRepository=https://raw.github.com/genthaler/${project.artifactId}/mvn-repo
 [INFO] Scanning for projects...
 [INFO]                                                                         
 [INFO] ------------------------------------------------------------------------
@@ -28,7 +29,11 @@ $ mvn archetype:generate \
 [INFO] 
 [INFO] --- maven-archetype-plugin:2.2:generate (default-cli) @ standalone-pom ---
 [INFO] Generating project in Interactive mode
-[INFO] Archetype repository missing. Using the one from [${project.groupId}:${project.artifactId}:${project.version}] found in catalog local
+[INFO] Archetype defined by properties
+Downloading: https://raw.github.com/genthaler/${project.artifactId}/mvn-repo/org/apache/maven/archetypes/${project.artifactId}/${project.version}/${project.artifactId}-${project.version}.jar
+Downloaded: https://raw.github.com/genthaler/${project.artifactId}/mvn-repo/org/apache/maven/archetypes/${project.artifactId}/${project.version}/${project.artifactId}-${project.version}.jar (8 KB at 2.9 KB/sec)
+Downloading: https://raw.github.com/genthaler/${project.artifactId}/mvn-repo/org/apache/maven/archetypes/${project.artifactId}/${project.version}/${project.artifactId}-${project.version}.pom
+Downloaded: https://raw.github.com/genthaler/${project.artifactId}/mvn-repo/org/apache/maven/archetypes/${project.artifactId}/${project.version}/${project.artifactId}-${project.version}.pom (7 KB at 8.6 KB/sec)
 Define value for property 'groupId': : com.example
 Define value for property 'artifactId': : touch-beanshell-maven-plugin
 Define value for property 'version':  1.0-SNAPSHOT: : 
@@ -98,7 +103,8 @@ $ mvn archetype:generate \
 	-DinteractiveMode=false \
 	-DarchetypeGroupId=${project.groupId} \
 	-DarchetypeArtifactId=${project.artifactId} \
-	-DarchetypeVersion=${project.version}
+	-DarchetypeVersion=${project.version} \
+	-DarchetypeRepository=https://raw.github.com/genthaler/${project.artifactId}/mvn-repo \
 	-DgroupId=org.apache.maven.plugins \
 	-DartifactId=touch-beanshell-maven-plugin \
 	-Dversion=0.1-SNAPSHOT \
@@ -123,7 +129,11 @@ $ mvn archetype:generate \
 [INFO] 
 [INFO] --- maven-archetype-plugin:2.2:generate (default-cli) @ standalone-pom ---
 [INFO] Generating project in Batch mode
-[INFO] Archetype repository missing. Using the one from [${project.groupId}:${project.artifactId}:${project.version}] found in catalog local
+[INFO] Archetype defined by properties
+Downloading: https://raw.github.com/genthaler/${project.artifactId}/mvn-repo/org/apache/maven/archetypes/${project.artifactId}/${project.version}/${project.artifactId}-${project.version}.jar
+Downloaded: https://raw.github.com/genthaler/${project.artifactId}/mvn-repo/org/apache/maven/archetypes/${project.artifactId}/${project.version}/${project.artifactId}-${project.version}.jar (8 KB at 2.9 KB/sec)
+Downloading: https://raw.github.com/genthaler/${project.artifactId}/mvn-repo/org/apache/maven/archetypes/${project.artifactId}/${project.version}/${project.artifactId}-${project.version}.pom
+Downloaded: https://raw.github.com/genthaler/${project.artifactId}/mvn-repo/org/apache/maven/archetypes/${project.artifactId}/${project.version}/${project.artifactId}-${project.version}.pom (7 KB at 8.6 KB/sec)
 [INFO] ----------------------------------------------------------------------------
 [INFO] Using following parameters for creating project from Archetype: ${project.artifactId}:${project.version}
 [INFO] ----------------------------------------------------------------------------
