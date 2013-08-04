@@ -1,5 +1,9 @@
 
 .project
+<<<<<<< HEAD
 /target
 
 *.prefs
+=======
+.c9revisions
+>>>>>>> fb1be8380156e2a3c48fdc8a72d9207643418c3c
