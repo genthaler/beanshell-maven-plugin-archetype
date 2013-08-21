@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.genthaler</groupId>
 	<artifactId>beanshell-maven-plugin-archetype</artifactId>
@@ -28,19 +27,6 @@
 			<timezone>-10</timezone>
 		</developer>
 	</developers>
-	<ciManagement>
-		<system>Travis CI</system>
-		<url>https://travis-ci.org/genthaler/${project.artifactId}</url>
-		<notifiers>
-			<notifier>
-				<type>mail</type>
-				<sendOnSuccess>true</sendOnSuccess>
-				<sendOnFailure>true</sendOnFailure>
-				<sendOnError>true</sendOnError>
-				<sendOnWarning>true</sendOnWarning>
-			</notifier>
-		</notifiers>
-	</ciManagement>
 	<scm>
 		<connection>scm:git:https://github.com/genthaler/${project.artifactId}.git</connection>
 		<developerConnection>scm:git:https://github.com/genthaler/${project.artifactId}.git</developerConnection>
@@ -51,6 +37,19 @@
 		<system>GitHub</system>
 		<url>https://github.com/genthaler/${project.artifactId}/issues</url>
 	</issueManagement>
+	<ciManagement>
+		<system>Travis CI</system>
+		<url>https://travis-ci.org/genthaler/${project.artifactId}</url>
+		<notifiers>
+			<notifier>
+				<type>mail</type>
+				<sendOnError>true</sendOnError>
+				<sendOnFailure>true</sendOnFailure>
+				<sendOnSuccess>true</sendOnSuccess>
+				<sendOnWarning>true</sendOnWarning>
+			</notifier>
+		</notifiers>
+	</ciManagement>
 	<distributionManagement>
 		<repository>
 			<id>github</id>
@@ -110,12 +109,12 @@
 				<plugin>
 					<groupId>com.github.github</groupId>
 					<artifactId>downloads-maven-plugin</artifactId>
-					<version>0.5</version>
+					<version>0.6</version>
 				</plugin>
 				<plugin>
 					<groupId>com.github.github</groupId>
 					<artifactId>site-maven-plugin</artifactId>
-					<version>0.6</version>
+					<version>0.8</version>
 				</plugin>
 				<plugin>
 					<artifactId>maven-docck-plugin</artifactId>
@@ -140,7 +139,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-release-plugin</artifactId>
-				<configuration />
+				<configuration></configuration>
 			</plugin>
 			<plugin>
 				<artifactId>maven-docck-plugin</artifactId>
