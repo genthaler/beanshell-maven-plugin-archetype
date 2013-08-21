@@ -1,4 +1,4 @@
-### a Maven archetype to create a BeanShell-based Maven plugin
+### A Maven archetype to create a BeanShell-based Maven plugin
 
 Please see the [Project Documentation](http://genthaler.github.com/beanshell-maven-plugin-archetype)
 
