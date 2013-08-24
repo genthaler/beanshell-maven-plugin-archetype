@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!--
   #%L
   Maven Archetype Beanshell-based Maven Plugin
@@ -18,17 +17,13 @@
   limitations under the License.
   #L%
   -->
+# ${project.name}
 
-<faqs xmlns="http://maven.apache.org/FML/1.0.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/FML/1.0.1 http://maven.apache.org/xsd/fml-1.0.1.xsd"
-	title="Frequently Asked Questions" toplink="false">
-	<part id="general">
-		<title>General</title>
-		<faq id="whats-the-point">
-			<question> What is the point?</question>
-			<answer>
-				<p> An intellectual exercise, mostly.</p>
-			</answer>
-		</faq>
-	</part>
-</faqs>
+## Usage
+
+ This archetype will create a skeleton Beanshell-based Maven 2/3 plugin
+
+	mvn archetype:generate \
+		-DarchetypeGroupId=${project.groupId} \
+		-DarchetypeArtifactId=${project.artifactId} \
+		-DarchetypeVersion=${project.version}

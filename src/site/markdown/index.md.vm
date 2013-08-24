@@ -1,0 +1,44 @@
+<!--
+  #%L
+  Maven Archetype Beanshell-based Maven Plugin
+  %%
+  Copyright (C) 2012 - 2013 Günther Enthaler
+  %%
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+       http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  #L%
+  -->
+# ${project.name}
+
+## Introduction
+
+This archetype will generate a skeleton Maven 2 Beanshell-Based Plugin 
+
+## Usage
+
+General instructions on how to use the this archetype can be found on the [usage page](./usage.html). Some more
+specific use cases are described in the examples given below.
+
+In case you still have questions regarding the plugin's usage, please have a look at the [FAQ](./faq.html) and feel
+free to [ask a question](./issue-tracking.html). It is also worth browsing/searching [previous issues](./issue-tracking.html).
+
+If you feel like the plugin is missing a feature or has a defect, you can fill a feature request or bug report in our
+[issue tracker](./issue-tracking.html). When creating a new issue, please provide a comprehensive description of your
+concern. Especially for fixing bugs it is crucial that the developers can reproduce your problem. For this reason,
+entire debug logs, POMs or most preferably little demo projects attached to the issue are very much appreciated.
+Of course, patches are welcome, too. Contributors can check out the project from our
+[source repository](./source-repository.html).
+
+## Examples
+
+To provide you with better understanding of some usages of the ${project.name},
+you can take a look at [this example](./examples/example.html).
