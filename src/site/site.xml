@@ -3,7 +3,7 @@
   #%L
   Maven Archetype Beanshell-based Maven Plugin
   %%
-  Copyright (C) 2012 - 2013 Günther Enthaler
+  Copyright (C) 2012 - 2014 Günther Enthaler
   %%
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -22,6 +22,10 @@
 <project xmlns="http://maven.apache.org/DECORATION/1.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd">
+	<poweredBy>
+		<logo
+			img="${project.ciManagement.url}.svg?branch=master" />
+	</poweredBy>
 	<skin>
 		<groupId>org.apache.maven.skins</groupId>
 		<artifactId>maven-fluido-skin</artifactId>
