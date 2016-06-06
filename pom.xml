@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.github.genthaler</groupId>
@@ -14,68 +13,12 @@
 	<description>Maven Archetype to generate an Beanshell-based Maven Plugin</description>
 	<url>http://genthaler.github.com/${project.artifactId}/</url>
 	<inceptionYear>2012</inceptionYear>
-	<licenses>
-		<license>
-			<name>The Apache Software License, Version 2.0</name>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-			<distribution>repo</distribution>
-		</license>
-	</licenses>
-	<developers>
-		<developer>
-			<id>genthaler</id>
-			<name>Günther Enthaler</name>
-			<email>genthaler@github.com</email>
-			<url>http://genthaler.github.io</url>
-			<roles>
-				<role>Java Developer</role>
-			</roles>
-			<timezone>+10</timezone>
-			<properties>
-				<picUrl>http://www.gravatar.com/avatar/2a38f078b2ac0a89de09be4d5807fedb.png</picUrl>
-			</properties>
-		</developer>
-	</developers>
 	<scm>
 		<connection>scm:git:https://github.com/genthaler/${project.artifactId}.git</connection>
 		<developerConnection>scm:git:https://github.com/genthaler/${project.artifactId}.git</developerConnection>
 		<tag>HEAD</tag>
 		<url>https://github.com/genthaler/${project.artifactId}</url>
 	</scm>
-	<issueManagement>
-		<system>GitHub</system>
-		<url>https://github.com/genthaler/${project.artifactId}/issues</url>
-	</issueManagement>
-	<ciManagement>
-		<system>Travis CI</system>
-		<url>https://travis-ci.org/genthaler/${project.artifactId}</url>
-		<notifiers>
-			<notifier>
-				<type>mail</type>
-				<sendOnError>true</sendOnError>
-				<sendOnFailure>true</sendOnFailure>
-				<sendOnSuccess>true</sendOnSuccess>
-				<sendOnWarning>true</sendOnWarning>
-			</notifier>
-		</notifiers>
-	</ciManagement>
-	<distributionManagement>
-		<snapshotRepository>
-			<id>sonatype-nexus-snapshots</id>
-			<name>Sonatype Nexus Snapshots</name>
-			<url>${sonatypeOssDistMgmtSnapshotsUrl}</url>
-		</snapshotRepository>
-		<repository>
-			<id>sonatype-nexus-staging</id>
-			<name>Nexus Release Repository</name>
-			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-		</repository>
-		<site>
-			<id>github</id>
-			<name>GitHub</name>
-			<url>http://genthaler.github.io/${project.artifactId}/</url>
-		</site>
-	</distributionManagement>
 	<properties>
 		<antVersion>1.8</antVersion>
 		<github.global.server>github</github.global.server>
