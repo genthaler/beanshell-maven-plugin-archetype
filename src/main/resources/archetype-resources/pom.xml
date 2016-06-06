@@ -155,6 +155,11 @@
 						<reports>
 							<report>report</report>
 						</reports>
+						<configuration>
+							<goalPrefix>${goalPrefix}</goalPrefix>
+							<helpPackageName>${groupId}.help</helpPackageName>
+							<skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
+						</configuration>
 					</reportSet>
 				</reportSets>
 			</plugin>
