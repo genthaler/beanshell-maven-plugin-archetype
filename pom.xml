@@ -19,12 +19,6 @@
 		<tag>HEAD</tag>
 		<url>https://github.com/genthaler/${project.artifactId}</url>
 	</scm>
-	<properties>
-		<antVersion>1.8</antVersion>
-		<github.global.server>github</github.global.server>
-		<mavenInvokerPluginVersion>1.8</mavenInvokerPluginVersion>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
 	<build>
 		<extensions>
 			<extension>
@@ -36,55 +30,13 @@
 		<pluginManagement>
 			<plugins>
 				<plugin>
-					<artifactId>maven-deploy-plugin</artifactId>
-					<version>2.7</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-invoker-plugin</artifactId>
-					<version>${mavenInvokerPluginVersion}</version>
-				</plugin>
-				<plugin>
-					<groupId>com.google.code.sortpom</groupId>
-					<artifactId>maven-sortpom-plugin</artifactId>
-					<version>2.2</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-plugin-plugin</artifactId>
-					<version>3.2</version>
-				</plugin>
-				<plugin>
-					<groupId>com.github.github</groupId>
-					<artifactId>site-maven-plugin</artifactId>
-					<version>0.8</version>
-				</plugin>
-				<plugin>
 					<artifactId>maven-docck-plugin</artifactId>
 					<version>1.0</version>
 				</plugin>
 				<plugin>
-					<artifactId>maven-release-plugin</artifactId>
-					<version>2.4.1</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-site-plugin</artifactId>
-					<version>3.3</version>
-					<dependencies>
-						<dependency>
-							<groupId>org.apache.maven.doxia</groupId>
-							<artifactId>doxia-module-markdown</artifactId>
-							<version>1.4</version>
-						</dependency>
-					</dependencies>
-				</plugin>
-				<plugin>
-					<groupId>org.codehaus.mojo</groupId>
-					<artifactId>license-maven-plugin</artifactId>
-					<version>1.5</version>
-				</plugin>
-				<plugin>
 					<groupId>com.github.genthaler</groupId>
 					<artifactId>credentials-maven-plugin</artifactId>
-					<version>1.0</version>
+					<version>1.3</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
@@ -92,21 +44,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>license-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>default-process-sources</id>
-						<phase>process-sources</phase>
-						<goals>
-							<goal>update-project-license</goal>
-							<goal>update-file-header</goal>
-						</goals>
-					</execution>
-				</executions>
 				<configuration>
-					<licenseName>apache_v2</licenseName>
-					<canUpdateCopyright>true</canUpdateCopyright>
-					<canUpdateDescription>true</canUpdateDescription>
-					<organizationName>Günther Enthaler</organizationName>
 					<extraExtensions>
 						<md>xml</md>
 						<vm>xml</vm>
@@ -175,178 +113,14 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<artifactId>maven-release-plugin</artifactId>
-				<configuration>
-					<mavenExecutorId>forked-path</mavenExecutorId>
-					<useReleaseProfile>false</useReleaseProfile>
-					<releaseProfiles>sonatype-oss-release</releaseProfiles>
-					<goals>deploy site-deploy</goals>
-					<username>${github.com.username}</username>
-					<password>${github.com.password}</password>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-site-plugin</artifactId>
-				<configuration>
-					<skipDeploy>true</skipDeploy>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>com.github.github</groupId>
-				<artifactId>site-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>site</id>
-						<phase>site-deploy</phase>
-						<goals>
-							<goal>site</goal>
-						</goals>
-						<configuration>
-							<message>Creating site for ${project.version}</message>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
 	<reporting>
 		<plugins>
 			<plugin>
-				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>2.7</version>
-			</plugin>
-			<plugin>
 				<artifactId>maven-invoker-plugin</artifactId>
-				<version>${mavenInvokerPluginVersion}</version>
-			</plugin>
-			<plugin>
-				<artifactId>maven-changes-plugin</artifactId>
-				<version>2.9</version>
-				<reportSets>
-					<reportSet>
-						<reports>
-							<report>github-report</report>
-						</reports>
-					</reportSet>
-				</reportSets>
-				<configuration>
-					<onlyMilestoneIssues>false</onlyMilestoneIssues>
-					<onlyCurrentVersion>false</onlyCurrentVersion>
-					<includeOpenIssues>true</includeOpenIssues>
-					<columnNames>Type,Key,Summary,Assignee,Status,Fix Version</columnNames>
-					<sortColumnNames>Type,Key</sortColumnNames>
-				</configuration>
-			</plugin>
-			<plugin>
-				<artifactId>maven-changelog-plugin</artifactId>
-				<version>2.2</version>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>versions-maven-plugin</artifactId>
-				<version>2.1</version>
-				<reportSets>
-					<reportSet>
-						<reports>
-							<report>dependency-updates-report</report>
-							<report>plugin-updates-report</report>
-							<report>property-updates-report</report>
-						</reports>
-					</reportSet>
-				</reportSets>
+				<version>${maven-invoker-plugin.version}</version>
 			</plugin>
 		</plugins>
 	</reporting>
-	<profiles>
-		<profile>
-			<id>disable-java8-doclint</id>
-			<activation>
-				<jdk>[1.8,)</jdk>
-			</activation>
-			<properties>
-				<additionalparam>-Xdoclint:none</additionalparam>
-			</properties>
-		</profile>
-		<profile>
-			<id>sonatype-oss-release</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-source-plugin</artifactId>
-						<version>2.1.2</version>
-						<executions>
-							<execution>
-								<id>attach-sources</id>
-								<goals>
-									<goal>jar-no-fork</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-javadoc-plugin</artifactId>
-						<version>2.7</version>
-						<executions>
-							<execution>
-								<id>attach-javadocs</id>
-								<goals>
-									<goal>jar</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.4</version>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
-								</goals>
-							</execution>
-						</executions>
-						<configuration>
-							<useAgent>true</useAgent>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<id>m2e</id>
-			<!-- This profile is only activated when building in Eclipse with m2e -->
-			<activation>
-				<property>
-					<name>m2e.version</name>
-				</property>
-			</activation>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>com.google.code.sortpom</groupId>
-						<artifactId>maven-sortpom-plugin</artifactId>
-						<executions>
-							<execution>
-								<id>sort</id>
-								<phase>validate</phase>
-								<goals>
-									<goal>sort</goal>
-								</goals>
-							</execution>
-						</executions>
-						<configuration>
-							<nrOfIndentSpace>-1</nrOfIndentSpace>
-							<sortProperties>true</sortProperties>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
 </project>
