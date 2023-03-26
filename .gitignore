@@ -7,3 +7,4 @@
 release.properties
 *.releaseBackup
 /beanshell-maven-plugin-archetype.iml
+.DS_Store
